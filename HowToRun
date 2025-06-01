@@ -1,0 +1,19 @@
+flex lexer.l
+
+yacc -d parser.y
+
+gcc -g y.tab.c lex.yy.c -ll 
+
+
+./a.out < assign-1_test-1_invalid.c
+
+./a.out < assign-1_test-2_invalid.c
+
+
+./a.out < assignment-1_nested_for_valid.c
+
+./a.out < assignment-1_nested_do_while_valid.c
+
+./a.out < assignment-1_simple_do_while_valid.c
+
+./a.out < assignment-1_simple_for_valid.c
